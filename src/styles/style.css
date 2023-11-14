@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #f2f2f2;
+}
+
+.card-container {
+    height: 80vh;
+}
+
+.card {
+    width: 25rem;
+    height: 22rem;
+}
+
+.table-container {
+    width: 90%;
+    height: 80vh;
+    margin: 0 auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+}
+
+.btn-acciones {
+    margin: 2px;
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import { Link, useNavigate} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
+
 
 export const Login = () => {
     const navigate = useNavigate();
@@ -17,8 +18,8 @@ export const Login = () => {
     }
     return (
         <>
-            <div className="d-flex justify-content-center align-items-center" style={{ height: '80vh' }}>
-                <div className="card" style={{ width: '25rem', height: '22rem' }}>
+            <div className="d-flex justify-content-center align-items-center card-container">
+                <div className="card">
                     <div className='card-body'>
                         <h2 className="card-title text-center mb-5">Gestión Vehicular</h2>
                         <form onSubmit={handleSubmit}>

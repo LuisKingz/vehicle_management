@@ -19,8 +19,8 @@ export const Navigation = () => {
   return (
     <>
       {/* Sidebar */}
-      <Navbar bg="light" expand="lg" style={{ width: '100%' }}>
-        <Navbar.Brand href="#">Vehicle Management</Navbar.Brand>
+      <Navbar bg="light" expand="lg" style={{ width: '100%', height: '5rem', backgroundColor: 'black' }}>
+        <Navbar.Brand href="/Home">Vehicle Management</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">

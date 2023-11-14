@@ -1,4 +1,5 @@
 import { Login } from './routes/Login';
+import "./styles/style.css";
 
 function App() {
   return (

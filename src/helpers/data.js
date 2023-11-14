@@ -1,0 +1,20 @@
+export const dataTemp = [
+    {
+        id: 1,
+        tipo: 'Automovil',
+        placa: 'ABC123',
+        marca: 'Toyota',
+        modelo: 'Corolla',
+        entidad: "México",
+        anio: 2013,
+        cilindraje: 4,
+        serie: 'ABC123',
+        motor: 'ABC123',
+        tarjeta: 'ABC123',
+        seguro: 1,
+        tenencia: 2020,
+        verificacion: 'Si',
+        mantenimiento: 'Si',
+        observaciones: 'Ninguna',
+    },
+]
