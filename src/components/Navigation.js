@@ -18,26 +18,29 @@ export const Navigation = () => {
   };
   return (
     <>
-      {/* Sidebar */}
-      <Navbar bg="light" expand="lg" style={{ width: '100%', height: '5rem', backgroundColor: 'black' }}>
-        <Navbar.Brand href="/Home">Vehicle Management</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#vehicles">Vehicles</Nav.Link>
-            <Nav.Link href="#reports">Reports</Nav.Link>
-          </Nav>
-
-          {/* User Icon and Dropdown in Collapsed Navbar */}
-          <Nav className="ml-auto">
-            <NavDropdown title={<FontAwesomeIcon icon={faUser} />} id="basic-nav-dropdown" align={'end'}>
-              <NavDropdown.Item onClick={handleEditPassword}>Edit Password</NavDropdown.Item>
-              <NavDropdown.Item onClick={handleLogout}>Logout</NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">Gestión Vehicular</a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul>
+            <div className="d-flex ">
+              <div className="btn-group">
+                <button type="button" className="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <FontAwesomeIcon icon={faUser} />
+                </button>
+                <ul className="dropdown-menu dropdown-menu-end">
+                  <li><a className="dropdown-item" onClick={handleEditPassword}>Cambiar contraseña</a></li>
+                  <li><a className="dropdown-item" onClick={handleLogout} >Ceerar sesión</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
     </>
   );
 }

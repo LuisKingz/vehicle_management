@@ -1,9 +1,9 @@
-export const configColumns = [
+const configColumns = [
     {
         name: 'FOTO',
-        selector: row => row.foto,
-        sortable: true,
-        
+        cell: row => <img height="84px" width="56px" alt={row.name} src={row.url} />,
+        sortable: false,
+
     },
     {
         name: 'PLACA',
@@ -28,14 +28,30 @@ export const configColumns = [
     },
     {
         name: "TENENCIA",
-        cell: (row) => [
-            <span className={`badge ${row.tenencia === 'Alquilado' ? 'bg-danger' : 'bg-success'}`}>{row.tenencia}</span>
-        ],
+        cell: (row) => {
+            const currentYear = new Date().getFullYear();
+            const isOlderThanCurrentYear = row.tenencia < currentYear;
+            const badgeClass = isOlderThanCurrentYear ? 'bg-danger' : 'bg-success';
+            const text = isOlderThanCurrentYear ? 'PAGAR' : 'VIGENTE';
+
+            return (
+                <span className={`badge ${badgeClass}`}> {text + " " + row.tenencia}</span>
+            );
+        },
         sortable: true,
     },
     {
         name: "VERIFICACIÓN",
-        selector: row => row.verificacion,
+        cell: (row) => {
+            const currentYear = new Date().getFullYear();
+            const isOlderThanCurrentYear = row.tenencia < currentYear;
+            const badgeClass = row.tipo === 'Automovil' ? isOlderThanCurrentYear ? 'bg-danger' : 'bg-success' : "bg-light text-dark";
+            const text = row.tipo === 'Automovil' ? isOlderThanCurrentYear ? `PAGAR ${row.tenencia}` : `VIGENTE ${row.tenencia}` : 'No aplica';
+
+            return (
+                <span className={`badge ${badgeClass}`}> {text}</span>
+            );
+        },
         sortable: true,
     },
     {
@@ -62,3 +78,15 @@ export const configColumns = [
 
 ];
 
+const paginationComponentOptions = {
+    rowsPerPageText: 'Filas por página',
+    rangeSeparatorText: 'de',
+    selectAllRowsItem: true,
+    selectAllRowsItemText: 'Todos',
+    noRowsPerPage: false,
+    noResultsText: 'No se encontraron registros',
+    noResultsFoundText: 'No se encontraron registros',
+    RowsText: 'Filas',
+};
+
+export { configColumns, paginationComponentOptions };

@@ -4,6 +4,7 @@ import App from './App';
 import {Home} from './routes/Home';
 import { Error } from './components/Error';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
