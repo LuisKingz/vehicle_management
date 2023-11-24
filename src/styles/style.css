@@ -24,9 +24,11 @@ body {
 }
 
 .btn-acciones {
-    margin: 2px;
+    width: '25px';
+    height: '30px';
+    padding: '0px'
 }
 
-.dropdown-menu{
+.dropdown-menu {
     cursor: pointer;
 }

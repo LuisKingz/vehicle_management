@@ -64,24 +64,12 @@ const configColumns = [
         selector: row => row.observaciones,
         sortable: true,
     },
-    {
-        name: 'ACCIONES',
-        cell: (row) => [
-            <button data-id={row.placa} className="btn btn-warning btn-acciones">E</button>,
-            <button data-id={row.placa} className="btn btn-danger btn-acciones">E</button>,
-            <button data-id={row.placa} className="btn btn-info btn-acciones">D</button>
-        ],
-        ignoreRowClick: true,
-        allowOverflow: true,
-        button: true,
-    }
 
 ];
 
 const paginationComponentOptions = {
     rowsPerPageText: 'Filas por página',
     rangeSeparatorText: 'de',
-    selectAllRowsItem: true,
     selectAllRowsItemText: 'Todos',
     noRowsPerPage: false,
     noResultsText: 'No se encontraron registros',

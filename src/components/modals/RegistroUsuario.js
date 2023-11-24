@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
 
-export const RegistroUsuario = ({ handleCreateUser }) => {
+export const RegistroUsuario = ({ handleCreateUser, data }) => {
     const [user, setUser] = useState({
-        nombre: '',
-        usuario: '',
-        contrasena: '',
-        rol: 'usuario',
+        nombre: data?.nombre || '',
+        usuario: data?.usuario || '',
+        contrasena: data?.contrasena || '',
+        rol: data?.rol || 'usuario',
     })
     return (
         <>
